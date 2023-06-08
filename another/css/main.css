@@ -1,0 +1,94 @@
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box; /*говорит браузеру учитывать любые границы и внутренние отступы в значениях, которые вы указываете 
+	в ширине и высоте элемента. Если вы выставите элементу ширину 100 пикселей, то эти 100 пикселей будут включать в себя границы и 
+	нутренние отступы, а контент сожмётся, чтобы выделить для них место. Обычно это упрощает работу с размерами элементов.
+
+	Также существует content box даёт стандартное поведение свойства box-sizing. Если вы выставите элементу ширину 100 пикселей, 
+	то ширина его контента будет 100 пикселей, а ширина границ и внутренних отступов при рендере будет добавлена к финальной ширине, 
+	делая элемент шире ста пикселей.*/
+}	
+
+body {
+	background-color: #efefef;
+}
+
+main {
+	background-color:white;
+	width:70%;
+	padding:50px; /*внутрениий отступ*/
+	margin: auto; /*внешний отступ*/
+	display:flex; /*гибкий перенос (block переносит на следующую, inline не переносит)*/
+	flex-wrap:wrap; /* сохраняется размер div'ов*/
+	justify-content: center; /* works only with flex display */
+	box-shadow: 5px 0 10px 1px rgba(0,0,0,0.2); /*box-shadow: none | <тень> [,<тень>]*
+												где <тень>:
+												inset <сдвиг по x> <сдвиг по y> <радиус размытия> <растяжение> <цвет> 
+												красный - зеленый - синий- альфа-канал(прозрачность)*/
+}
+
+.photo {
+	width: calc(50% - 40px);
+	height: calc( (35vw - 40px)/16*9);
+	margin: 20px;
+	background-color: orange;
+	background-position: center;
+	background-size: cover;
+	box-shadow: 0 0 20px 1px rgba(0,0,0,0.5);
+}
+
+.photo:hover {
+	transform: rotate(3deg) scale(1.07); /* анимация rotate - */
+}
+
+.photo1 {
+	background-image:url(../images/a.jpg);
+}
+.photo2 {
+	background-image:url(../images/b.jpg);
+}
+.photo3 {
+	background-image:url(../images/c.jpg);
+}
+.photo4 {
+	background-image:url(../images/d.jpg);
+}
+.photo5 {
+	background-image:url(../images/e.jpg);
+}
+.photo6 {
+	background-image:url(../images/f.jpg);
+}
+.photo7 {
+	background-image:url(../images/g.jpg);
+}
+.photo8 {
+	background-image:url(../images/h.jpg);
+}
+.photo9 {
+	background-image:url(../images/i.jpg);
+}
+.photo10 {
+	background-image:url(../images/j.jpg);
+}
+.photo11 {
+	background-image:url(../images/k.jpg);
+}
+.photo12 {
+	background-image:url(../images/l.jpg);
+}
+
+h1 {
+	width:100%;
+	text-align: center;
+	font-size: 48px;
+	font-family: "RobotoCondensed-Regular";
+}
+
+@font-face {
+	font-family:"RobotoCondensed-Regular";
+	src:url("../fonts/RobotoCondensed-Regular.ttf") format("truetype");
+	font-style: normal; 
+	font-weight: normal;
+}
